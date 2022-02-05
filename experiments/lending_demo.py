@@ -25,9 +25,12 @@ from absl import flags
 from agents import threshold_policies
 from experiments import lending
 from experiments import lending_plots
+import matplotlib
 import matplotlib.pyplot as plt
 import numpy as np
 import simplejson as json
+
+matplotlib.use("Qt5Agg")  # Need to add "pyqt5" to requirements.txt
 
 flags.DEFINE_string('outfile', None, 'Path to write out results.')
 flags.DEFINE_string('plots_directory', None, 'Directory to write out plots.')

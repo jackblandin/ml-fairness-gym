@@ -15,4 +15,3 @@
 #!/bin/bash
 
 find . -name '*_test.py' | sed 's:^./::' | sed 's:.py$::' | sed 's:/:.:g' | grep -v "^lib\." | xargs -n1 python -m
-
