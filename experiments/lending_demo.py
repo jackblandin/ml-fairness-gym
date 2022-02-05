@@ -1,5 +1,5 @@
 # coding=utf-8
-# Copyright 2020 The ML Fairness Gym Authors.
+# Copyright 2022 The ML Fairness Gym Authors.
 #
 # Licensed under the Apache License, Version 2.0 (the "License");
 # you may not use this file except in compliance with the License.
@@ -17,7 +17,6 @@
 
 from __future__ import absolute_import
 from __future__ import division
-
 from __future__ import print_function
 
 import os
@@ -26,9 +25,12 @@ from absl import flags
 from agents import threshold_policies
 from experiments import lending
 from experiments import lending_plots
+import matplotlib
 import matplotlib.pyplot as plt
 import numpy as np
 import simplejson as json
+
+matplotlib.use("Qt5Agg")  # Need to add "pyqt5" to requirements.txt
 
 flags.DEFINE_string('outfile', None, 'Path to write out results.')
 flags.DEFINE_string('plots_directory', None, 'Directory to write out plots.')
